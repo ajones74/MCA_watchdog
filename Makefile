@@ -1,11 +1,11 @@
-BINARY := watchdog_app
+BINARY := mca_watchdog
 
 CFLAGS += -Wall -O0
 
 CFLAGS += $(shell pkg-config --cflags libdigiapix)
 LDLIBS += $(shell pkg-config --libs libdigiapix)
 
-$(BINARY): watchdog_app.o
+$(BINARY): $(BINARY).o
 	$(CC) $(LDFLAGS) $^ $(LDLIBS) -o $@
 
 .PHONY: install
