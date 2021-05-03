@@ -1,4 +1,4 @@
-BINARY := mca_watchdog
+BINARY := mca-watchdog
 
 CFLAGS += -Wall -O0
 
